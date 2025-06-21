@@ -1,9 +1,9 @@
 require('dotenv').config();
 
 const express = require('express');
-const expressLayout = require('express-ejs-layouts')
+const expressLayout = require('express-ejs-layouts');
 
-const connectDB = require('./server/config/db')
+const connectDB = require('./server/config/db');
 
 //Connectin to DB
 connectDB();
@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const PORT = 5000 || process.env.PORT;
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 // Templating Engine
 app.use(expressLayout);
