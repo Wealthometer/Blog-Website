@@ -6,12 +6,12 @@ const router = express.Router();
 router.get('', (req, res) => {
     // How to render or pass ejs data
     const locals = {
-        title: "Nodejs Blog",
-        description: "Simple Blog Created"
+        title: "Nodejs Blog Web Page",
+        description: "Simple Blog web page Created with Node.js, MongoDb adn Express"
     }
 
 
-    res.render('index')
+    res.render('index', { locals })
 })
 
 router.get('/about', (req, res) => {
