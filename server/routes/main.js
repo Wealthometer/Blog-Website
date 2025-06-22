@@ -15,7 +15,7 @@ router.get('', async (req, res) => {
     }
 
     try {
-        const data = await Post.find()
+        const data = await Post.find();
         res.render('index', { locals, data });
     } catch (error) {
         console.log("There is an error: " + error);
