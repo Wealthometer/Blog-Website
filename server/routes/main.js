@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/Post')
+const Post = require('../models/Post');
 
 //Routes
 /**
@@ -15,8 +15,8 @@ router.get('', async (req, res) => {
     }
 
     try {
-        const data = await Post.find();
-        res.render('index', { locals, data })
+        const data = await Post.find()
+        res.render('index', { locals, data });
     } catch (error) {
         console.log("There is an error: " + error);
     }
@@ -32,6 +32,10 @@ router.get('/about', (req, res) => {
 router.get('/contact', (req, res) => {
     res.render('contact')
 })
+
+
+
+module.exports = router;
 
 // function insertPostData () {
 //     Post.insertMany(
@@ -85,6 +89,3 @@ router.get('/contact', (req, res) => {
 // }
 
 // insertPostData();
-
-
-module.exports = router;
