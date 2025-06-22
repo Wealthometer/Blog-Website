@@ -7,16 +7,21 @@ const Post = require('../models/Post')
  * GET
  * HOME
  */
-router.get('', (req, res) => {
+router.get('', async (req, res) => {
     // How to render or pass ejs data
     const locals = {
         title: "Nodejs Blog Web Page",
         description: "Simple Blog web page Created with Node.js, MongoDb adn Express"
     }
 
+    try {
+        const data = await Post.find();
+        res.render('index', { locals, data })
+    } catch (error) {
+        console.log("There is an error: " + error);
+    }
 
-    res.render('index', { locals })
-})
+});
 
 
 
