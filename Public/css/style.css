@@ -1,22 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
 :root {
-    --black: #1c1c1c;
-    --gray: #7e7e7e;
-    --gray-light: #4e4e4e;
-    --red: #b30000;
-    --font-size-base: 1rem;
-    --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
-    --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
-    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-    --border-radius: 10px;
-    --font-family: 'Raleway' , sans-serif;
+  --black: #1c1c1c;
+  --gray: #7E7E7E;
+  --gray-light: #E4E4E4;
+  --red: #b30000;
+  --font-size-base: 1rem;
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --border-radius: 10px;
 }
 
 body {
-    font-family: var(--font-family),  sans-serif;
-    color: var(--black);
-    font-size: var(--font-size-base);
-    background: url('/img/img-noise-361x370.png');
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+  font-size: var(--font-size-base);
+  background-color: #FAF5EE;
+  background-image: url("/img/img-noise-361x370.png");
+  margin: 0;
 }
+
+a { color: var(--black); }
+h1 { font-size: var(--font-size-xl); }
+h2 { font-size: var(--font-size-lg); }
+h3 { font-size: var(--font-size-md); }
 
 input[type="text"],
 input[type="email"],
@@ -24,7 +32,7 @@ input[type="password"],
 input[type="search"],
 select,
 textarea {
-  font-family: var(--font-family), sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   display: block;
   box-sizing: border-box;

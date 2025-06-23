@@ -1,20 +1,29 @@
 <header class="header">
-    <a href="/" class="header__logo">Node Blog</a>
+  <a href="/" class="header__logo">NodeJs</a>
 
-    <nav class="header__nav">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav class="header__nav">
+    <ul>
+      <li>
+        <a href="/" class="<%= isActiveRoute('/', currentRoute) %>">Home</a>
+      </li>
+      <li>
+        <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">About</a>
+      </li>
+      <li>
+        <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a>
+      </li>
+    </ul>
 
-    <div class="header__button">
-        <button class="searchBtn" aria-expanded="false">
-            Search
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-            </svg>
-        </button>
-    </div>
+  </nav>
+
+  <div class="header__button">
+    <button class="searchBtn" aria-expanded="false">
+      Search
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.79167 13.4583C10.9213 13.4583 13.4583 10.9213 13.4583 7.79167C13.4583 4.66205 10.9213 2.125 7.79167 2.125C4.66205 2.125 2.125 4.66205 2.125 7.79167C2.125 10.9213 4.66205 13.4583 7.79167 13.4583Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.875 14.875L11.7938 11.7938" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
 </header>
