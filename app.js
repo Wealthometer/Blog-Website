@@ -11,7 +11,6 @@ const connectDB = require('./server/config/db');
 const { isActiveRoute } = require('./server/helpers/routeHelpers');
 // const { route } = require('./server/routes/main');
 const adminRoutes = require('./server/routes/admin');
-app.use('/admin', adminRoutes);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -31,7 +30,7 @@ app.use(session({
   store: MongoStore.create({
     mongoUrl: process.env.MONGODB_URI
   }),
-  //cookie: { maxAge: new Date ( Date.now() + (3600000) ) } 
+  cookie: { maxAge: new Date ( Date.now() + (3600000) ) } 
 }));
 
 app.use(express.static('public'));
